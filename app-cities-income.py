@@ -21,7 +21,7 @@ location_filter = st.sidebar.multiselect(
 income_genre = st.radio(
     "Choose the income level",
     ('Low','Median','High'))
-    
+
 if income_genre == 'Low':
     df = df[df.median_income <= 2.5]
 elif income_genre == 'Median':
@@ -38,6 +38,6 @@ st.map(df)
 
 # display of histogram
 st.subheader('Histogram of the Median House Price')
-fig, ax = plt.subplot(figsize=(20,5))
+fig, ax = plt.subplots(figsize=(20,5))
 df.median_income.hist(bins=30)
 st.pyplot(fig)
