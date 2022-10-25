@@ -19,9 +19,9 @@ location_filter = st.sidebar.multiselect(
 
 # a radio button
 income_genre = st.radio(
-    "Choose the income level"
-    ('Low','Median','High')
-)
+    "Choose the income level",
+    ('Low','Median','High'))
+    
 if income_genre == 'Low':
     df = df[df.median_income <= 2.5]
 elif income_genre == 'Median':
