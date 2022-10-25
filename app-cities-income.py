@@ -18,7 +18,7 @@ location_filter = st.sidebar.multiselect(
 
 
 # a radio button
-income_genre = st.radio(
+income_genre = st.sidebar.radio(
     "Choose the income level",
     ('Low','Median','High'))
 
