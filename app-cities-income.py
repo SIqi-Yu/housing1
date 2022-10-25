@@ -25,7 +25,7 @@ income_genre = st.sidebar.radio(
 if income_genre == 'Low':
     df = df[df.median_income <= 2.5]
 elif income_genre == 'Median':
-    df = df[df.median_income > 2.5 & df.median_income < 4.5]
+    df = df[(df.median_income > 2.5) & (df.median_income < 4.5)]
 else:
     df = df[df.median_income >= 4.5]
 
